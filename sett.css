@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body{
+    background-color: #302f49;
+    overflow: hidden;
+}
+#header{
+    position: fixed;
+    margin-left: 550px;
+    margin-top: -195px;
+}
+.container {
+    background: #FFFF;
+    width: 550px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 3%;
+    box-shadow: 3px 5px 25px rgba(255, 255, 255, 0.4);
+    margin-top: 110px;
+    margin-left: 520px;
+}
+.leftbox {
+    float: left;
+    top: -5%;
+    left: 5%;
+    position: absolute;
+    width: 20%;
+    height: 103%;  
+    background-color: #302f49;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, .5);
+    border: 1em solid #302f49;
+}
+nav a {
+    list-style: none;
+    padding: 35px;
+    color: #FFFF;
+    font-size: 1.1em;
+    display: block;
+    transition: all .3s ease-in-out;
+    margin-left: -15px;
+}
+
+nav a:hover{
+    color: #007BFf;
+    cursor: pointer;
+    transform: scale(1.2); 
+}
+nav a:first-child {
+    margin-top: 7px;
+}
+nav a.active {
+    color: #007BFf;
+}
+.rightbox {
+    width: 60%;
+    margin-left: 40%;
+    padding-top: 5px;
+}
+.tabShow {
+    transition: all .5s ease-in;
+    width: 80%;
+    margin-top: 30%;
+}
+.input, p {
+    border: 0;
+    border-bottom: 1px solid #007BFf;
+    width: 80%;
+    font-family: 'Inter', sans-serif;
+    font-size: .7em;
+    padding: 7px 0;
+    color: #007BFf;
+    outline: none;
+}
+h1 {
+    font-family: 'Inter', sans-serif;
+    color: #007BFf;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+h2 {
+    color: #777;
+   font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+.btn h2{
+    color: rgb(255, 255, 255);
+   font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+span {
+    font-size: .7em;
+    color: #007BFf;
+}
+.btn {
+   font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    color: #FFFF;
+    background: #3a546f;
+    padding: 7px 15px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    margin-top: 15px;
+}
+.btn1{
+   font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    color: #FFFF;
+    background: #eb0c0c;
+    padding: 7px 15px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    margin-top: 15px;
+}
+.btn1 h2{
+    color: rgb(255, 255, 255);
+   font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+.tabShow {
+    display: none;
+}
+.title {
+    color: #302f49;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+.rcorner {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+.lcorner {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+/*passowrd*/
+.checkerContainer {
+    margin-left: -50px;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .checkerContainer .title {
+    color: #007BFf;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: clamp(1rem, 4vw, 1.6rem);
+  }
+  
+  .checkerContainer .form-group {
+    margin-left: 50px;
+    margin-top: 25px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .checkerContainer .form-group #passwordChecker {
+      height: 100%;
+      outline: none;
+      font-size: 1rem;
+      margin-top: 0.2rem;
+      color: #007BFf;
+      position: relative;
+      letter-spacing: 1px;
+      border-radius: 0.4rem;
+      background: transparent;
+      padding: 0 2rem 0 0.5rem;
+      transition: background 0.19s ease-in-out;
+      margin-right: 50px;
+  }
+  
+  .checkerContainer .passTypeToggle {
+      top: 50%;
+      right: 4%;
+      display: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #302f49;
+      position: absolute;
+      transform: translate(10%, -50%);
+      font-family: 'Inter', sans-serif;
+  }
+  
+  .checkerContainer .form-group::before {
+    left: 0;
+    top: 50%;
+    z-index: 1;
+    padding: 0 4px;
+    font-size: 14px;
+    user-select: none;
+    position: absolute;
+    pointer-events: none;
+    content: attr(data-placeholder);
+    transform: translate(15%, -50%);
+    transition: transform .2s ease-in-out;
+  }
+  
+  .checkerContainer .form-group.focus::before {
+      color: #777;
+      transform: translate(15%, -130%);
+  }
+  
+  .checkerContainer .form-group #passwordChecker:focus label {
+    color: #fff;
+  }
+  
+  .checkerContainer .form-group.weak #passwordChecker {
+    color: rgb(239, 68, 68);
+    border: 2px solid rgb(239, 68, 68);
+  }
+  
+  .checkerContainer .form-group.weak::before{
+      color: rgb(239, 68, 68);
+  }
+  
+  .checkerContainer .form-group.medium #passwordChecker {
+    color: rgb(251, 191, 36);
+    border: 2px solid rgb(251, 191, 36);
+  }
+  
+  .checkerContainer .form-group.medium::before{
+      color: rgb(251, 191, 36);
+  }
+  
+  .checkerContainer .form-group.strong::before{
+      color: rgb(34, 197, 94);
+  }
+  
+  .checkerContainer .message.weak {
+    color: rgb(239, 68, 68) !important;
+  }
+  
+  .checkerContainer .message.medium {
+    color: rgb(251, 191, 36) !important;
+  }
+  
+  .checkerContainer .form-group.strong #passwordChecker {
+    color: rgb(34, 197, 94);
+    border: 2px solid rgb(34, 197, 94);
+  }
+  
+  .checkerContainer .message.strong {
+    color: rgb(34, 197, 94) !important;
+  }
+  
+  .checkerContainer .form-group input:focus {
+    background: #4f4b4b;
+  }
+  
+  .checkerContainer .message {
+    margin-top: 0.4rem;
+    color: #ccccccbd;
+    margin-bottom: 0.8rem;
+    margin-left: 50px;
+  }

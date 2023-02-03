@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Certification,learning, quizes,streaks, daily activity">
+    <meta name="description" content="The page is a settings of Learnophila">
+    <meta name="robots" content="index , follow">
+    <title>User settings page</title>
+    <link rel="stylesheet" href="set.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <img id="header" src="images\fl.png">
+    <div class="rcorner"><img src="images\rc.png"></div>
+    <div class="lcorner"><img src="images\lc.png"></div>
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fa fa-user"></i>Profile information
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="fa fa-gear"></i>Account settings
+                </a>
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fa fa-shield"></i>Security
+                </a>
+                <a onclick="tabs(3)" class="tab">
+                    <i class="fa fa-bell"></i>Notification
+                </a>
+                <a onclick="tabs(4)" class="tab">
+                    <i class="fa fa-credit-card"></i>Billing
+                </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>YOUR PROFILE INFORMATION</h1>
+                <label for="fullName"><h2>Full Name</h2></label>
+                    <input type="text" class="input" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" value="">
+                    <small id="fullNameHelp" class="form-text text-muted"><h2>Your name may appear around here where you are mentioned. You can change or remove it at any time.</h2></small>
+                    <label for="bio"><h2>Your Bio</h2></label>
+                    <textarea class="input autosize" id="bio" placeholder="Write something about you" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 62px;"></textarea>
+                    <label for="location"><h2>University</h2></label>
+                    <input type="text" class="input" id="University" placeholder="Enter the name of your University" value="">
+                    <h2> All of the fields on this page are optional and can be deleted at any time, and by filling them out, you're giving us consent to share this data wherever your user profile appears.</h2>
+                    <button type="button" class="btn"><h2>Update Profile</h2></button>
+                    <button type="reset" class="btn"><h2>Reset Changes</h2></button>
+            </div>
+            <div class="account tabShow">
+                <h1>ACCOUNT SETTINGS</h1>
+                <h2>Username</h2>
+                <input type="text" class="input" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="">
+                <small id="usernameHelp" class="form-text text-muted"><h2>After changing your username, your old username becomes available for anyone else to claim.</h2></small>
+               <h2>Delete Account</h2>
+                <p class="text-muted font-size-sm"><h2>Once you delete your account, there is no going back. Please be certain.</h2></p>
+                <button class="btn1" type="button"><h2>Delete Account</h2></button>
+            </div>
+            <div class="security tabShow">
+                <h1>SECURITY SETTINGS</h1>
+                <h2>Change Password</h2>            
+                    <input type="text" class="input" placeholder="Enter your old password">
+                    <div class="checkerContainer">
+                        <div class="form-group" data-placeholder="Enter New Password">
+                            <input type="password" id="passwordChecker">
+                            <span class='passTypeToggle' title="Show"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="message"></div>
+                    </div>
+                    <script src="password.js"></script>
+                    <input type="text" class="input" placeholder="Confirm new password">
+            </div>
+            <div class="notification tabShow">
+                <h1>NOTIFICATION SETTINGS</h1>
+                <h2>Security Alerts</h2>
+                <h2>Receive security alert notifications via email</h2>
+                <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
+                <h2>Email each time a vulnerability is found</h2>
+                <input type="checkbox" class="custom-control-input" id="customCheck2" checked="">
+                <h2>Email a digest summary of vulnerability</h2>
+                <h2>Other Notifications</h2>
+                <h2>Comments</h2>
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                <h2>Reminders</h2>
+                <input type="checkbox" class="custom-control-input" id="customSwitch3" checked="">
+                <h2>Lectures</h2>
+                <input type="checkbox" class="custom-control-input" id="customSwitch4" checked="">
+            </div>
+            <div class="billing tabShow">
+                <h1>BILLING SETTINGS</h1>
+                <h2>Payment Method</h2>
+                <h2>You have not added a payment method</h2>
+                <button class="btn" type="button"><h2>Add Payment Method</h2></button>
+                <h2>Payment History</h2>
+                <h2>You have not made any payment.</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        const tabBtn = document.querySelectorAll(".tab");
+        const tab = document.querySelectorAll(".tabShow");
+
+        function tabs(panelIndex) {
+            tab.forEach(function(node) {
+                node.style.display = "none";
+            });
+            tab[panelIndex].style.display = "block";
+        }
+        tabs(0);
+    </script>
+    <script>
+       $(".tab").click(function() {
+            $(this).addClass("active").siblings().removeClass("active");
+       }) 
+    </script>
+</body>
+</html>
